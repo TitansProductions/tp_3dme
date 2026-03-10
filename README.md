@@ -1,3 +1,10 @@
+# Description
+
+TP 3DME, a free script supporting **ALL** the frameworks. 
+
+This script was firstly made for **TPZ-CORE** framework but we also provide it for RedM Community.
+
+This 3DME script can handle multiple texts displayed above every player without replacing existing displayed 3d message.
 
 # Installation
 
