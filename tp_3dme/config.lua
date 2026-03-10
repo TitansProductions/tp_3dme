@@ -13,3 +13,6 @@ Config.Duration = 5000
 
 -- The maximum distance to display to nearby players.
 Config.DisplayDistance = 20.0
+
+-- Set to true if you want to also display the sent 3d message to the chat (for near players).
+Config.SendChatMessage = true
