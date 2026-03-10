@@ -40,6 +40,7 @@ AddEventHandler('tp_3dme:server:display', function(text)
 		text    = text, 
 	}, coords, Config.DisplayDistance)
 
+	if Config.SendChatMessage then
 	for _, player in pairs (GetPlayers()) do 
 		
         local targetCoords = GetEntityCoords(GetPlayerPed(tonumber(player)))
@@ -52,13 +53,14 @@ AddEventHandler('tp_3dme:server:display', function(text)
 			if tonumber(player) == _source then 
 				sentBy = '^4[ME]^7'
 			else 
-				sentBy = "^3" .. PlayerData.username .. "^7"
+				sentBy = "^3" ..API.getFirstName(_source) .. " " .. API.getLastName(_source) .. "^7"
 			end
 	
 			TriggerClientEvent('chatMessage', tonumber(player), sentBy,  { 255, 255, 255 }, text)
 
 		end
 
+	end
 	end
 
 	Wait(Config.Duration)
